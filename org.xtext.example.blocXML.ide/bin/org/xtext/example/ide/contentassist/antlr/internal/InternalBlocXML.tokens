@@ -1,0 +1,71 @@
+' DiagramType='=20
+' IDA='=25
+' IDF='=26
+' IDT='=27
+' Name='=32
+' PortDirection='=42
+' PortID='=40
+' PortName='=41
+' Technology="Bloc">'=37
+' Visible="true" Simulated="true" Locked="false"'=22
+'/>'=11
+'</component>'=28
+'</document>'=17
+'</documents>'=18
+'</layer>'=23
+'</netlist>'=19
+'</node>'=38
+'</nodes>'=35
+'</t'=33
+'</variable_type>'=30
+'<?xml version = "1.0" encoding = "UTF-16"?>'=12
+'<component ComponentID='=24
+'<document Name='=15
+'<documents>'=14
+'<layer Name='=21
+'<link CompID='=39
+'<netlist xmlns="urn:netlist-schema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:netlist-schema ValidationRules.xsd" >\r\n\t<!--Famic Technologies Inc.-->\r\n\t<!--Automation Studio-->\r\n\t<!--Export-->'=13
+'<node Name='=36
+'<nodes>'=34
+'<t'=31
+'<variable_type Name='=29
+'>'=16
+RULE_ANY_OTHER=10
+RULE_ID=6
+RULE_INT=5
+RULE_ML_COMMENT=7
+RULE_SL_COMMENT=8
+RULE_STRING=4
+RULE_WS=9
+T__11=11
+T__12=12
+T__13=13
+T__14=14
+T__15=15
+T__16=16
+T__17=17
+T__18=18
+T__19=19
+T__20=20
+T__21=21
+T__22=22
+T__23=23
+T__24=24
+T__25=25
+T__26=26
+T__27=27
+T__28=28
+T__29=29
+T__30=30
+T__31=31
+T__32=32
+T__33=33
+T__34=34
+T__35=35
+T__36=36
+T__37=37
+T__38=38
+T__39=39
+T__40=40
+T__41=41
+T__42=42
