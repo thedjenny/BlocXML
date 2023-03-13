@@ -50,29 +50,34 @@ public class BlocXMLGrammarAccess extends AbstractElementFinder.AbstractGrammarE
 	public class NetlistTypeElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.BlocXML.NetlistType");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Keyword cNetlistXmlnsUrnNetlistSchemaXmlnsXsiHttpWwwW3Org2001XMLSchemaInstanceXsiSchemaLocationUrnNetlistSchemaValidationRulesXsdFamicTechnologiesIncAutomationStudioExportKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Keyword cDocumentsKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Keyword cDocumentNameKeyword_2 = (Keyword)cGroup.eContents().get(2);
-		private final Assignment cDocnameAssignment_3 = (Assignment)cGroup.eContents().get(3);
-		private final RuleCall cDocnameSTRINGTerminalRuleCall_3_0 = (RuleCall)cDocnameAssignment_3.eContents().get(0);
-		private final Group cGroup_4 = (Group)cGroup.eContents().get(4);
-		private final Keyword cDiagramTypeKeyword_4_0 = (Keyword)cGroup_4.eContents().get(0);
-		private final Assignment cDoctypeAssignment_4_1 = (Assignment)cGroup_4.eContents().get(1);
-		private final RuleCall cDoctypeSTRINGTerminalRuleCall_4_1_0 = (RuleCall)cDoctypeAssignment_4_1.eContents().get(0);
-		private final Keyword cGreaterThanSignKeyword_5 = (Keyword)cGroup.eContents().get(5);
-		private final Assignment cLayerAssignment_6 = (Assignment)cGroup.eContents().get(6);
-		private final RuleCall cLayerLayerParserRuleCall_6_0 = (RuleCall)cLayerAssignment_6.eContents().get(0);
-		private final Keyword cDocumentKeyword_7 = (Keyword)cGroup.eContents().get(7);
-		private final Keyword cDocumentsKeyword_8 = (Keyword)cGroup.eContents().get(8);
-		private final Assignment cNodesAssignment_9 = (Assignment)cGroup.eContents().get(9);
-		private final RuleCall cNodesNodesParserRuleCall_9_0 = (RuleCall)cNodesAssignment_9.eContents().get(0);
-		private final Keyword cNetlistKeyword_10 = (Keyword)cGroup.eContents().get(10);
+		private final Keyword cNetlistXmlnsUrnNetlistSchemaXmlnsXsiHttpWwwW3Org2001XMLSchemaInstanceXsiSchemaLocationUrnNetlistSchemaValidationRulesXsdKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Keyword cFamicTechnologiesIncKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Keyword cAutomationStudioKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final Keyword cExportKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		private final Keyword cDocumentsKeyword_4 = (Keyword)cGroup.eContents().get(4);
+		private final Keyword cDocumentNameKeyword_5 = (Keyword)cGroup.eContents().get(5);
+		private final Assignment cDocnameAssignment_6 = (Assignment)cGroup.eContents().get(6);
+		private final RuleCall cDocnameSTRINGTerminalRuleCall_6_0 = (RuleCall)cDocnameAssignment_6.eContents().get(0);
+		private final Group cGroup_7 = (Group)cGroup.eContents().get(7);
+		private final Keyword cDiagramTypeKeyword_7_0 = (Keyword)cGroup_7.eContents().get(0);
+		private final Assignment cDoctypeAssignment_7_1 = (Assignment)cGroup_7.eContents().get(1);
+		private final RuleCall cDoctypeSTRINGTerminalRuleCall_7_1_0 = (RuleCall)cDoctypeAssignment_7_1.eContents().get(0);
+		private final Keyword cGreaterThanSignKeyword_8 = (Keyword)cGroup.eContents().get(8);
+		private final Assignment cLayerAssignment_9 = (Assignment)cGroup.eContents().get(9);
+		private final RuleCall cLayerLayerParserRuleCall_9_0 = (RuleCall)cLayerAssignment_9.eContents().get(0);
+		private final Keyword cDocumentKeyword_10 = (Keyword)cGroup.eContents().get(10);
+		private final Keyword cDocumentsKeyword_11 = (Keyword)cGroup.eContents().get(11);
+		private final Assignment cNodesAssignment_12 = (Assignment)cGroup.eContents().get(12);
+		private final RuleCall cNodesNodesParserRuleCall_12_0 = (RuleCall)cNodesAssignment_12.eContents().get(0);
+		private final Keyword cNetlistKeyword_13 = (Keyword)cGroup.eContents().get(13);
 		
 		//NetlistType:
-		//    ('<netlist xmlns="urn:netlist-schema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:netlist-schema ValidationRules.xsd" >
-		//    <!--Famic Technologies Inc.-->
-		//    <!--Automation Studio-->
-		//    <!--Export-->')?
+		//    ('<netlist    xmlns="urn:netlist-schema"
+		//        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		//        xsi:schemaLocation="urn:netlist-schema ValidationRules.xsd" >')?
+		//    ('<!--Famic Technologies Inc.-->')?
+		//    ('<!--Automation Studio-->')?
+		//    ('<!--Export-->')?
 		//    '<documents>'
 		//    '<document Name=' docname=STRING(' DiagramType='doctype=STRING)?'>'
 		//    layer+= Layer*
@@ -83,10 +88,12 @@ public class BlocXMLGrammarAccess extends AbstractElementFinder.AbstractGrammarE
 		//        ;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//('<netlist xmlns="urn:netlist-schema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:netlist-schema ValidationRules.xsd" >
-		//<!--Famic Technologies Inc.-->
-		//<!--Automation Studio-->
-		//<!--Export-->')?
+		//('<netlist    xmlns="urn:netlist-schema"
+		//    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		//    xsi:schemaLocation="urn:netlist-schema ValidationRules.xsd" >')?
+		//('<!--Famic Technologies Inc.-->')?
+		//('<!--Automation Studio-->')?
+		//('<!--Export-->')?
 		//'<documents>'
 		//'<document Name=' docname=STRING(' DiagramType='doctype=STRING)?'>'
 		//layer+= Layer*
@@ -96,59 +103,67 @@ public class BlocXMLGrammarAccess extends AbstractElementFinder.AbstractGrammarE
 		//'</netlist>'
 		public Group getGroup() { return cGroup; }
 		
-		//('<netlist xmlns="urn:netlist-schema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:netlist-schema ValidationRules.xsd" >
-		//<!--Famic Technologies Inc.-->
-		//<!--Automation Studio-->
-		//<!--Export-->')?
-		public Keyword getNetlistXmlnsUrnNetlistSchemaXmlnsXsiHttpWwwW3Org2001XMLSchemaInstanceXsiSchemaLocationUrnNetlistSchemaValidationRulesXsdFamicTechnologiesIncAutomationStudioExportKeyword_0() { return cNetlistXmlnsUrnNetlistSchemaXmlnsXsiHttpWwwW3Org2001XMLSchemaInstanceXsiSchemaLocationUrnNetlistSchemaValidationRulesXsdFamicTechnologiesIncAutomationStudioExportKeyword_0; }
+		//('<netlist    xmlns="urn:netlist-schema"
+		//    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		//    xsi:schemaLocation="urn:netlist-schema ValidationRules.xsd" >')?
+		public Keyword getNetlistXmlnsUrnNetlistSchemaXmlnsXsiHttpWwwW3Org2001XMLSchemaInstanceXsiSchemaLocationUrnNetlistSchemaValidationRulesXsdKeyword_0() { return cNetlistXmlnsUrnNetlistSchemaXmlnsXsiHttpWwwW3Org2001XMLSchemaInstanceXsiSchemaLocationUrnNetlistSchemaValidationRulesXsdKeyword_0; }
+		
+		//('<!--Famic Technologies Inc.-->')?
+		public Keyword getFamicTechnologiesIncKeyword_1() { return cFamicTechnologiesIncKeyword_1; }
+		
+		//('<!--Automation Studio-->')?
+		public Keyword getAutomationStudioKeyword_2() { return cAutomationStudioKeyword_2; }
+		
+		//('<!--Export-->')?
+		public Keyword getExportKeyword_3() { return cExportKeyword_3; }
 		
 		//'<documents>'
-		public Keyword getDocumentsKeyword_1() { return cDocumentsKeyword_1; }
+		public Keyword getDocumentsKeyword_4() { return cDocumentsKeyword_4; }
 		
 		//'<document Name='
-		public Keyword getDocumentNameKeyword_2() { return cDocumentNameKeyword_2; }
+		public Keyword getDocumentNameKeyword_5() { return cDocumentNameKeyword_5; }
 		
 		//docname=STRING
-		public Assignment getDocnameAssignment_3() { return cDocnameAssignment_3; }
+		public Assignment getDocnameAssignment_6() { return cDocnameAssignment_6; }
 		
 		//STRING
-		public RuleCall getDocnameSTRINGTerminalRuleCall_3_0() { return cDocnameSTRINGTerminalRuleCall_3_0; }
+		public RuleCall getDocnameSTRINGTerminalRuleCall_6_0() { return cDocnameSTRINGTerminalRuleCall_6_0; }
 		
 		//(' DiagramType='doctype=STRING)?
-		public Group getGroup_4() { return cGroup_4; }
+		public Group getGroup_7() { return cGroup_7; }
 		
 		//' DiagramType='
-		public Keyword getDiagramTypeKeyword_4_0() { return cDiagramTypeKeyword_4_0; }
+		public Keyword getDiagramTypeKeyword_7_0() { return cDiagramTypeKeyword_7_0; }
 		
 		//doctype=STRING
-		public Assignment getDoctypeAssignment_4_1() { return cDoctypeAssignment_4_1; }
+		public Assignment getDoctypeAssignment_7_1() { return cDoctypeAssignment_7_1; }
 		
 		//STRING
-		public RuleCall getDoctypeSTRINGTerminalRuleCall_4_1_0() { return cDoctypeSTRINGTerminalRuleCall_4_1_0; }
+		public RuleCall getDoctypeSTRINGTerminalRuleCall_7_1_0() { return cDoctypeSTRINGTerminalRuleCall_7_1_0; }
 		
 		//'>'
-		public Keyword getGreaterThanSignKeyword_5() { return cGreaterThanSignKeyword_5; }
+		public Keyword getGreaterThanSignKeyword_8() { return cGreaterThanSignKeyword_8; }
 		
 		//layer+= Layer*
-		public Assignment getLayerAssignment_6() { return cLayerAssignment_6; }
+		public Assignment getLayerAssignment_9() { return cLayerAssignment_9; }
 		
 		//Layer
-		public RuleCall getLayerLayerParserRuleCall_6_0() { return cLayerLayerParserRuleCall_6_0; }
+		public RuleCall getLayerLayerParserRuleCall_9_0() { return cLayerLayerParserRuleCall_9_0; }
 		
 		//'</document>'
-		public Keyword getDocumentKeyword_7() { return cDocumentKeyword_7; }
+		public Keyword getDocumentKeyword_10() { return cDocumentKeyword_10; }
 		
 		//'</documents>'
-		public Keyword getDocumentsKeyword_8() { return cDocumentsKeyword_8; }
+		public Keyword getDocumentsKeyword_11() { return cDocumentsKeyword_11; }
 		
 		//nodes = Nodes
-		public Assignment getNodesAssignment_9() { return cNodesAssignment_9; }
+		public Assignment getNodesAssignment_12() { return cNodesAssignment_12; }
 		
 		//Nodes
-		public RuleCall getNodesNodesParserRuleCall_9_0() { return cNodesNodesParserRuleCall_9_0; }
+		public RuleCall getNodesNodesParserRuleCall_12_0() { return cNodesNodesParserRuleCall_12_0; }
 		
 		//'</netlist>'
-		public Keyword getNetlistKeyword_10() { return cNetlistKeyword_10; }
+		public Keyword getNetlistKeyword_13() { return cNetlistKeyword_13; }
 	}
 	public class LayerElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.BlocXML.Layer");
@@ -627,10 +642,12 @@ public class BlocXMLGrammarAccess extends AbstractElementFinder.AbstractGrammarE
 	}
 	
 	//NetlistType:
-	//    ('<netlist xmlns="urn:netlist-schema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:netlist-schema ValidationRules.xsd" >
-	//    <!--Famic Technologies Inc.-->
-	//    <!--Automation Studio-->
-	//    <!--Export-->')?
+	//    ('<netlist    xmlns="urn:netlist-schema"
+	//        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	//        xsi:schemaLocation="urn:netlist-schema ValidationRules.xsd" >')?
+	//    ('<!--Famic Technologies Inc.-->')?
+	//    ('<!--Automation Studio-->')?
+	//    ('<!--Export-->')?
 	//    '<documents>'
 	//    '<document Name=' docname=STRING(' DiagramType='doctype=STRING)?'>'
 	//    layer+= Layer*

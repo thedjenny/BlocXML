@@ -22,14 +22,20 @@ public class BlocXMLSyntacticSequencer extends AbstractSyntacticSequencer {
 
 	protected BlocXMLGrammarAccess grammarAccess;
 	protected AbstractElementAlias match_Layer_VisibleTrueSimulatedTrueLockedFalseKeyword_2_q;
-	protected AbstractElementAlias match_NetlistType_NetlistXmlnsUrnNetlistSchemaXmlnsXsiHttpWwwW3Org2001XMLSchemaInstanceXsiSchemaLocationUrnNetlistSchemaValidationRulesXsdFamicTechnologiesIncAutomationStudioExportKeyword_0_q;
+	protected AbstractElementAlias match_NetlistType_AutomationStudioKeyword_2_q;
+	protected AbstractElementAlias match_NetlistType_ExportKeyword_3_q;
+	protected AbstractElementAlias match_NetlistType_FamicTechnologiesIncKeyword_1_q;
+	protected AbstractElementAlias match_NetlistType_NetlistXmlnsUrnNetlistSchemaXmlnsXsiHttpWwwW3Org2001XMLSchemaInstanceXsiSchemaLocationUrnNetlistSchemaValidationRulesXsdKeyword_0_q;
 	protected AbstractElementAlias match_Tag___INTTerminalRuleCall_5_2_or_STRINGTerminalRuleCall_5_1__q;
 	
 	@Inject
 	protected void init(IGrammarAccess access) {
 		grammarAccess = (BlocXMLGrammarAccess) access;
 		match_Layer_VisibleTrueSimulatedTrueLockedFalseKeyword_2_q = new TokenAlias(false, true, grammarAccess.getLayerAccess().getVisibleTrueSimulatedTrueLockedFalseKeyword_2());
-		match_NetlistType_NetlistXmlnsUrnNetlistSchemaXmlnsXsiHttpWwwW3Org2001XMLSchemaInstanceXsiSchemaLocationUrnNetlistSchemaValidationRulesXsdFamicTechnologiesIncAutomationStudioExportKeyword_0_q = new TokenAlias(false, true, grammarAccess.getNetlistTypeAccess().getNetlistXmlnsUrnNetlistSchemaXmlnsXsiHttpWwwW3Org2001XMLSchemaInstanceXsiSchemaLocationUrnNetlistSchemaValidationRulesXsdFamicTechnologiesIncAutomationStudioExportKeyword_0());
+		match_NetlistType_AutomationStudioKeyword_2_q = new TokenAlias(false, true, grammarAccess.getNetlistTypeAccess().getAutomationStudioKeyword_2());
+		match_NetlistType_ExportKeyword_3_q = new TokenAlias(false, true, grammarAccess.getNetlistTypeAccess().getExportKeyword_3());
+		match_NetlistType_FamicTechnologiesIncKeyword_1_q = new TokenAlias(false, true, grammarAccess.getNetlistTypeAccess().getFamicTechnologiesIncKeyword_1());
+		match_NetlistType_NetlistXmlnsUrnNetlistSchemaXmlnsXsiHttpWwwW3Org2001XMLSchemaInstanceXsiSchemaLocationUrnNetlistSchemaValidationRulesXsdKeyword_0_q = new TokenAlias(false, true, grammarAccess.getNetlistTypeAccess().getNetlistXmlnsUrnNetlistSchemaXmlnsXsiHttpWwwW3Org2001XMLSchemaInstanceXsiSchemaLocationUrnNetlistSchemaValidationRulesXsdKeyword_0());
 		match_Tag___INTTerminalRuleCall_5_2_or_STRINGTerminalRuleCall_5_1__q = new AlternativeAlias(false, true, new TokenAlias(false, false, grammarAccess.getTagAccess().getINTTerminalRuleCall_5_2()), new TokenAlias(false, false, grammarAccess.getTagAccess().getSTRINGTerminalRuleCall_5_1()));
 	}
 	
@@ -71,8 +77,14 @@ public class BlocXMLSyntacticSequencer extends AbstractSyntacticSequencer {
 			List<INode> syntaxNodes = getNodesFor(transitionNodes, syntax);
 			if (match_Layer_VisibleTrueSimulatedTrueLockedFalseKeyword_2_q.equals(syntax))
 				emit_Layer_VisibleTrueSimulatedTrueLockedFalseKeyword_2_q(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if (match_NetlistType_NetlistXmlnsUrnNetlistSchemaXmlnsXsiHttpWwwW3Org2001XMLSchemaInstanceXsiSchemaLocationUrnNetlistSchemaValidationRulesXsdFamicTechnologiesIncAutomationStudioExportKeyword_0_q.equals(syntax))
-				emit_NetlistType_NetlistXmlnsUrnNetlistSchemaXmlnsXsiHttpWwwW3Org2001XMLSchemaInstanceXsiSchemaLocationUrnNetlistSchemaValidationRulesXsdFamicTechnologiesIncAutomationStudioExportKeyword_0_q(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if (match_NetlistType_AutomationStudioKeyword_2_q.equals(syntax))
+				emit_NetlistType_AutomationStudioKeyword_2_q(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if (match_NetlistType_ExportKeyword_3_q.equals(syntax))
+				emit_NetlistType_ExportKeyword_3_q(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if (match_NetlistType_FamicTechnologiesIncKeyword_1_q.equals(syntax))
+				emit_NetlistType_FamicTechnologiesIncKeyword_1_q(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if (match_NetlistType_NetlistXmlnsUrnNetlistSchemaXmlnsXsiHttpWwwW3Org2001XMLSchemaInstanceXsiSchemaLocationUrnNetlistSchemaValidationRulesXsdKeyword_0_q.equals(syntax))
+				emit_NetlistType_NetlistXmlnsUrnNetlistSchemaXmlnsXsiHttpWwwW3Org2001XMLSchemaInstanceXsiSchemaLocationUrnNetlistSchemaValidationRulesXsdKeyword_0_q(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if (match_Tag___INTTerminalRuleCall_5_2_or_STRINGTerminalRuleCall_5_1__q.equals(syntax))
 				emit_Tag___INTTerminalRuleCall_5_2_or_STRINGTerminalRuleCall_5_1__q(semanticObject, getLastNavigableState(), syntaxNodes);
 			else acceptNodes(getLastNavigableState(), syntaxNodes);
@@ -97,17 +109,91 @@ public class BlocXMLSyntacticSequencer extends AbstractSyntacticSequencer {
 	/**
 	 * <pre>
 	 * Ambiguous syntax:
-	 *     '&lt;netlist xmlns="urn:netlist-schema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:netlist-schema ValidationRules.xsd" &gt;
-	  *     	&lt;!--Famic Technologies Inc.--&gt;
-	  *     	&lt;!--Automation Studio--&gt;
-	  *     	&lt;!--Export--&gt;'?
+	 *     '&lt;!--Automation Studio--&gt;'?
 	 *
 	 * This ambiguous syntax occurs at:
-	 *     (rule start) (ambiguity) '&lt;documents&gt;' '&lt;document Name=' docname=STRING
+	 *     (
+	 *         (rule start) 
+	 *         '&lt;netlist	xmlns="urn:netlist-schema"
+	 *         		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	 *         		xsi:schemaLocation="urn:netlist-schema ValidationRules.xsd" &gt;'? 
+	 *         '&lt;!--Famic Technologies Inc.--&gt;'? 
+	 *         (ambiguity) 
+	 *         '&lt;!--Export--&gt;'? 
+	 *         '&lt;documents&gt;' 
+	 *         '&lt;document Name=' 
+	 *         docname=STRING
+	 *     )
 	 
 	 * </pre>
 	 */
-	protected void emit_NetlistType_NetlistXmlnsUrnNetlistSchemaXmlnsXsiHttpWwwW3Org2001XMLSchemaInstanceXsiSchemaLocationUrnNetlistSchemaValidationRulesXsdFamicTechnologiesIncAutomationStudioExportKeyword_0_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+	protected void emit_NetlistType_AutomationStudioKeyword_2_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+		acceptNodes(transition, nodes);
+	}
+	
+	/**
+	 * <pre>
+	 * Ambiguous syntax:
+	 *     '&lt;!--Export--&gt;'?
+	 *
+	 * This ambiguous syntax occurs at:
+	 *     (
+	 *         (rule start) 
+	 *         '&lt;netlist	xmlns="urn:netlist-schema"
+	 *         		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	 *         		xsi:schemaLocation="urn:netlist-schema ValidationRules.xsd" &gt;'? 
+	 *         '&lt;!--Famic Technologies Inc.--&gt;'? 
+	 *         '&lt;!--Automation Studio--&gt;'? 
+	 *         (ambiguity) 
+	 *         '&lt;documents&gt;' 
+	 *         '&lt;document Name=' 
+	 *         docname=STRING
+	 *     )
+	 
+	 * </pre>
+	 */
+	protected void emit_NetlistType_ExportKeyword_3_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+		acceptNodes(transition, nodes);
+	}
+	
+	/**
+	 * <pre>
+	 * Ambiguous syntax:
+	 *     '&lt;!--Famic Technologies Inc.--&gt;'?
+	 *
+	 * This ambiguous syntax occurs at:
+	 *     (
+	 *         (rule start) 
+	 *         '&lt;netlist	xmlns="urn:netlist-schema"
+	 *         		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	 *         		xsi:schemaLocation="urn:netlist-schema ValidationRules.xsd" &gt;'? 
+	 *         (ambiguity) 
+	 *         '&lt;!--Automation Studio--&gt;'? 
+	 *         '&lt;!--Export--&gt;'? 
+	 *         '&lt;documents&gt;' 
+	 *         '&lt;document Name=' 
+	 *         docname=STRING
+	 *     )
+	 
+	 * </pre>
+	 */
+	protected void emit_NetlistType_FamicTechnologiesIncKeyword_1_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+		acceptNodes(transition, nodes);
+	}
+	
+	/**
+	 * <pre>
+	 * Ambiguous syntax:
+	 *     '&lt;netlist	xmlns="urn:netlist-schema"
+	  *     		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	  *     		xsi:schemaLocation="urn:netlist-schema ValidationRules.xsd" &gt;'?
+	 *
+	 * This ambiguous syntax occurs at:
+	 *     (rule start) (ambiguity) '&lt;!--Famic Technologies Inc.--&gt;'? '&lt;!--Automation Studio--&gt;'? '&lt;!--Export--&gt;'? '&lt;documents&gt;' '&lt;document Name=' docname=STRING
+	 
+	 * </pre>
+	 */
+	protected void emit_NetlistType_NetlistXmlnsUrnNetlistSchemaXmlnsXsiHttpWwwW3Org2001XMLSchemaInstanceXsiSchemaLocationUrnNetlistSchemaValidationRulesXsdKeyword_0_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
 	}
 	

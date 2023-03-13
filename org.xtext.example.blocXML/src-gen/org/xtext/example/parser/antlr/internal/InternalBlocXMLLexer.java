@@ -12,31 +12,16 @@ import java.util.ArrayList;
 
 @SuppressWarnings("all")
 public class InternalBlocXMLLexer extends Lexer {
-    public static final int RULE_STRING=4;
-    public static final int RULE_SL_COMMENT=8;
     public static final int T__19=19;
     public static final int T__15=15;
-    public static final int T__37=37;
     public static final int T__16=16;
-    public static final int T__38=38;
     public static final int T__17=17;
-    public static final int T__39=39;
     public static final int T__18=18;
     public static final int T__11=11;
-    public static final int T__33=33;
     public static final int T__12=12;
-    public static final int T__34=34;
     public static final int T__13=13;
-    public static final int T__35=35;
     public static final int T__14=14;
-    public static final int T__36=36;
-    public static final int EOF=-1;
-    public static final int T__30=30;
-    public static final int T__31=31;
-    public static final int T__32=32;
     public static final int RULE_ID=6;
-    public static final int RULE_WS=9;
-    public static final int RULE_ANY_OTHER=10;
     public static final int T__26=26;
     public static final int T__27=27;
     public static final int T__28=28;
@@ -47,11 +32,29 @@ public class InternalBlocXMLLexer extends Lexer {
     public static final int T__23=23;
     public static final int T__24=24;
     public static final int T__25=25;
+    public static final int T__20=20;
+    public static final int T__21=21;
+    public static final int RULE_STRING=4;
+    public static final int RULE_SL_COMMENT=8;
+    public static final int T__37=37;
+    public static final int T__38=38;
+    public static final int T__39=39;
+    public static final int T__33=33;
+    public static final int T__34=34;
+    public static final int T__35=35;
+    public static final int T__36=36;
+    public static final int EOF=-1;
+    public static final int T__30=30;
+    public static final int T__31=31;
+    public static final int T__32=32;
+    public static final int RULE_WS=9;
+    public static final int RULE_ANY_OTHER=10;
+    public static final int T__44=44;
+    public static final int T__45=45;
     public static final int T__40=40;
     public static final int T__41=41;
-    public static final int T__20=20;
     public static final int T__42=42;
-    public static final int T__21=21;
+    public static final int T__43=43;
 
     // delegates
     // delegators
@@ -92,10 +95,10 @@ public class InternalBlocXMLLexer extends Lexer {
         try {
             int _type = T__12;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalBlocXML.g:12:7: ( '<netlist xmlns=\"urn:netlist-schema\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"urn:netlist-schema ValidationRules.xsd\" >\\r\\n\\t<!--Famic Technologies Inc.-->\\r\\n\\t<!--Automation Studio-->\\r\\n\\t<!--Export-->' )
-            // InternalBlocXML.g:12:9: '<netlist xmlns=\"urn:netlist-schema\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"urn:netlist-schema ValidationRules.xsd\" >\\r\\n\\t<!--Famic Technologies Inc.-->\\r\\n\\t<!--Automation Studio-->\\r\\n\\t<!--Export-->'
+            // InternalBlocXML.g:12:7: ( '<netlist\\txmlns=\"urn:netlist-schema\"\\r\\n\\t\\txmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\\r\\n\\t\\txsi:schemaLocation=\"urn:netlist-schema ValidationRules.xsd\" >' )
+            // InternalBlocXML.g:12:9: '<netlist\\txmlns=\"urn:netlist-schema\"\\r\\n\\t\\txmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\\r\\n\\t\\txsi:schemaLocation=\"urn:netlist-schema ValidationRules.xsd\" >'
             {
-            match("<netlist xmlns=\"urn:netlist-schema\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"urn:netlist-schema ValidationRules.xsd\" >\r\n\t<!--Famic Technologies Inc.-->\r\n\t<!--Automation Studio-->\r\n\t<!--Export-->"); 
+            match("<netlist\txmlns=\"urn:netlist-schema\"\r\n\t\txmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\r\n\t\txsi:schemaLocation=\"urn:netlist-schema ValidationRules.xsd\" >"); 
 
 
             }
@@ -113,10 +116,10 @@ public class InternalBlocXMLLexer extends Lexer {
         try {
             int _type = T__13;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalBlocXML.g:13:7: ( '<documents>' )
-            // InternalBlocXML.g:13:9: '<documents>'
+            // InternalBlocXML.g:13:7: ( '<!--Famic Technologies Inc.-->' )
+            // InternalBlocXML.g:13:9: '<!--Famic Technologies Inc.-->'
             {
-            match("<documents>"); 
+            match("<!--Famic Technologies Inc.-->"); 
 
 
             }
@@ -134,10 +137,10 @@ public class InternalBlocXMLLexer extends Lexer {
         try {
             int _type = T__14;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalBlocXML.g:14:7: ( '<document Name=' )
-            // InternalBlocXML.g:14:9: '<document Name='
+            // InternalBlocXML.g:14:7: ( '<!--Automation Studio-->' )
+            // InternalBlocXML.g:14:9: '<!--Automation Studio-->'
             {
-            match("<document Name="); 
+            match("<!--Automation Studio-->"); 
 
 
             }
@@ -155,10 +158,10 @@ public class InternalBlocXMLLexer extends Lexer {
         try {
             int _type = T__15;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalBlocXML.g:15:7: ( ' DiagramType=' )
-            // InternalBlocXML.g:15:9: ' DiagramType='
+            // InternalBlocXML.g:15:7: ( '<!--Export-->' )
+            // InternalBlocXML.g:15:9: '<!--Export-->'
             {
-            match(" DiagramType="); 
+            match("<!--Export-->"); 
 
 
             }
@@ -176,10 +179,11 @@ public class InternalBlocXMLLexer extends Lexer {
         try {
             int _type = T__16;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalBlocXML.g:16:7: ( '>' )
-            // InternalBlocXML.g:16:9: '>'
+            // InternalBlocXML.g:16:7: ( '<documents>' )
+            // InternalBlocXML.g:16:9: '<documents>'
             {
-            match('>'); 
+            match("<documents>"); 
+
 
             }
 
@@ -196,10 +200,10 @@ public class InternalBlocXMLLexer extends Lexer {
         try {
             int _type = T__17;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalBlocXML.g:17:7: ( '</document>' )
-            // InternalBlocXML.g:17:9: '</document>'
+            // InternalBlocXML.g:17:7: ( '<document Name=' )
+            // InternalBlocXML.g:17:9: '<document Name='
             {
-            match("</document>"); 
+            match("<document Name="); 
 
 
             }
@@ -217,10 +221,10 @@ public class InternalBlocXMLLexer extends Lexer {
         try {
             int _type = T__18;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalBlocXML.g:18:7: ( '</documents>' )
-            // InternalBlocXML.g:18:9: '</documents>'
+            // InternalBlocXML.g:18:7: ( ' DiagramType=' )
+            // InternalBlocXML.g:18:9: ' DiagramType='
             {
-            match("</documents>"); 
+            match(" DiagramType="); 
 
 
             }
@@ -238,11 +242,10 @@ public class InternalBlocXMLLexer extends Lexer {
         try {
             int _type = T__19;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalBlocXML.g:19:7: ( '</netlist>' )
-            // InternalBlocXML.g:19:9: '</netlist>'
+            // InternalBlocXML.g:19:7: ( '>' )
+            // InternalBlocXML.g:19:9: '>'
             {
-            match("</netlist>"); 
-
+            match('>'); 
 
             }
 
@@ -259,10 +262,10 @@ public class InternalBlocXMLLexer extends Lexer {
         try {
             int _type = T__20;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalBlocXML.g:20:7: ( '<layer Name=' )
-            // InternalBlocXML.g:20:9: '<layer Name='
+            // InternalBlocXML.g:20:7: ( '</document>' )
+            // InternalBlocXML.g:20:9: '</document>'
             {
-            match("<layer Name="); 
+            match("</document>"); 
 
 
             }
@@ -280,10 +283,10 @@ public class InternalBlocXMLLexer extends Lexer {
         try {
             int _type = T__21;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalBlocXML.g:21:7: ( ' Visible=\"true\" Simulated=\"true\" Locked=\"false\"' )
-            // InternalBlocXML.g:21:9: ' Visible=\"true\" Simulated=\"true\" Locked=\"false\"'
+            // InternalBlocXML.g:21:7: ( '</documents>' )
+            // InternalBlocXML.g:21:9: '</documents>'
             {
-            match(" Visible=\"true\" Simulated=\"true\" Locked=\"false\""); 
+            match("</documents>"); 
 
 
             }
@@ -301,10 +304,10 @@ public class InternalBlocXMLLexer extends Lexer {
         try {
             int _type = T__22;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalBlocXML.g:22:7: ( '</layer>' )
-            // InternalBlocXML.g:22:9: '</layer>'
+            // InternalBlocXML.g:22:7: ( '</netlist>' )
+            // InternalBlocXML.g:22:9: '</netlist>'
             {
-            match("</layer>"); 
+            match("</netlist>"); 
 
 
             }
@@ -322,10 +325,10 @@ public class InternalBlocXMLLexer extends Lexer {
         try {
             int _type = T__23;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalBlocXML.g:23:7: ( '<component ComponentID=' )
-            // InternalBlocXML.g:23:9: '<component ComponentID='
+            // InternalBlocXML.g:23:7: ( '<layer Name=' )
+            // InternalBlocXML.g:23:9: '<layer Name='
             {
-            match("<component ComponentID="); 
+            match("<layer Name="); 
 
 
             }
@@ -343,10 +346,10 @@ public class InternalBlocXMLLexer extends Lexer {
         try {
             int _type = T__24;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalBlocXML.g:24:7: ( ' IDA=' )
-            // InternalBlocXML.g:24:9: ' IDA='
+            // InternalBlocXML.g:24:7: ( ' Visible=\"true\" Simulated=\"true\" Locked=\"false\"' )
+            // InternalBlocXML.g:24:9: ' Visible=\"true\" Simulated=\"true\" Locked=\"false\"'
             {
-            match(" IDA="); 
+            match(" Visible=\"true\" Simulated=\"true\" Locked=\"false\""); 
 
 
             }
@@ -364,10 +367,10 @@ public class InternalBlocXMLLexer extends Lexer {
         try {
             int _type = T__25;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalBlocXML.g:25:7: ( ' IDF=' )
-            // InternalBlocXML.g:25:9: ' IDF='
+            // InternalBlocXML.g:25:7: ( '</layer>' )
+            // InternalBlocXML.g:25:9: '</layer>'
             {
-            match(" IDF="); 
+            match("</layer>"); 
 
 
             }
@@ -385,10 +388,10 @@ public class InternalBlocXMLLexer extends Lexer {
         try {
             int _type = T__26;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalBlocXML.g:26:7: ( ' IDT=' )
-            // InternalBlocXML.g:26:9: ' IDT='
+            // InternalBlocXML.g:26:7: ( '<component ComponentID=' )
+            // InternalBlocXML.g:26:9: '<component ComponentID='
             {
-            match(" IDT="); 
+            match("<component ComponentID="); 
 
 
             }
@@ -406,10 +409,10 @@ public class InternalBlocXMLLexer extends Lexer {
         try {
             int _type = T__27;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalBlocXML.g:27:7: ( '</component>' )
-            // InternalBlocXML.g:27:9: '</component>'
+            // InternalBlocXML.g:27:7: ( ' IDA=' )
+            // InternalBlocXML.g:27:9: ' IDA='
             {
-            match("</component>"); 
+            match(" IDA="); 
 
 
             }
@@ -427,10 +430,10 @@ public class InternalBlocXMLLexer extends Lexer {
         try {
             int _type = T__28;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalBlocXML.g:28:7: ( '<variable_type Name=' )
-            // InternalBlocXML.g:28:9: '<variable_type Name='
+            // InternalBlocXML.g:28:7: ( ' IDF=' )
+            // InternalBlocXML.g:28:9: ' IDF='
             {
-            match("<variable_type Name="); 
+            match(" IDF="); 
 
 
             }
@@ -448,10 +451,10 @@ public class InternalBlocXMLLexer extends Lexer {
         try {
             int _type = T__29;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalBlocXML.g:29:7: ( '</variable_type>' )
-            // InternalBlocXML.g:29:9: '</variable_type>'
+            // InternalBlocXML.g:29:7: ( ' IDT=' )
+            // InternalBlocXML.g:29:9: ' IDT='
             {
-            match("</variable_type>"); 
+            match(" IDT="); 
 
 
             }
@@ -469,10 +472,10 @@ public class InternalBlocXMLLexer extends Lexer {
         try {
             int _type = T__30;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalBlocXML.g:30:7: ( '<t' )
-            // InternalBlocXML.g:30:9: '<t'
+            // InternalBlocXML.g:30:7: ( '</component>' )
+            // InternalBlocXML.g:30:9: '</component>'
             {
-            match("<t"); 
+            match("</component>"); 
 
 
             }
@@ -490,10 +493,10 @@ public class InternalBlocXMLLexer extends Lexer {
         try {
             int _type = T__31;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalBlocXML.g:31:7: ( ' Name=' )
-            // InternalBlocXML.g:31:9: ' Name='
+            // InternalBlocXML.g:31:7: ( '<variable_type Name=' )
+            // InternalBlocXML.g:31:9: '<variable_type Name='
             {
-            match(" Name="); 
+            match("<variable_type Name="); 
 
 
             }
@@ -511,10 +514,10 @@ public class InternalBlocXMLLexer extends Lexer {
         try {
             int _type = T__32;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalBlocXML.g:32:7: ( '</t' )
-            // InternalBlocXML.g:32:9: '</t'
+            // InternalBlocXML.g:32:7: ( '</variable_type>' )
+            // InternalBlocXML.g:32:9: '</variable_type>'
             {
-            match("</t"); 
+            match("</variable_type>"); 
 
 
             }
@@ -532,10 +535,10 @@ public class InternalBlocXMLLexer extends Lexer {
         try {
             int _type = T__33;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalBlocXML.g:33:7: ( '<nodes>' )
-            // InternalBlocXML.g:33:9: '<nodes>'
+            // InternalBlocXML.g:33:7: ( '<t' )
+            // InternalBlocXML.g:33:9: '<t'
             {
-            match("<nodes>"); 
+            match("<t"); 
 
 
             }
@@ -553,10 +556,10 @@ public class InternalBlocXMLLexer extends Lexer {
         try {
             int _type = T__34;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalBlocXML.g:34:7: ( '</nodes>' )
-            // InternalBlocXML.g:34:9: '</nodes>'
+            // InternalBlocXML.g:34:7: ( ' Name=' )
+            // InternalBlocXML.g:34:9: ' Name='
             {
-            match("</nodes>"); 
+            match(" Name="); 
 
 
             }
@@ -574,10 +577,10 @@ public class InternalBlocXMLLexer extends Lexer {
         try {
             int _type = T__35;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalBlocXML.g:35:7: ( '<node Name=' )
-            // InternalBlocXML.g:35:9: '<node Name='
+            // InternalBlocXML.g:35:7: ( '</t' )
+            // InternalBlocXML.g:35:9: '</t'
             {
-            match("<node Name="); 
+            match("</t"); 
 
 
             }
@@ -595,10 +598,10 @@ public class InternalBlocXMLLexer extends Lexer {
         try {
             int _type = T__36;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalBlocXML.g:36:7: ( ' Technology=\"Bloc\">' )
-            // InternalBlocXML.g:36:9: ' Technology=\"Bloc\">'
+            // InternalBlocXML.g:36:7: ( '<nodes>' )
+            // InternalBlocXML.g:36:9: '<nodes>'
             {
-            match(" Technology=\"Bloc\">"); 
+            match("<nodes>"); 
 
 
             }
@@ -616,10 +619,10 @@ public class InternalBlocXMLLexer extends Lexer {
         try {
             int _type = T__37;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalBlocXML.g:37:7: ( '</node>' )
-            // InternalBlocXML.g:37:9: '</node>'
+            // InternalBlocXML.g:37:7: ( '</nodes>' )
+            // InternalBlocXML.g:37:9: '</nodes>'
             {
-            match("</node>"); 
+            match("</nodes>"); 
 
 
             }
@@ -637,10 +640,10 @@ public class InternalBlocXMLLexer extends Lexer {
         try {
             int _type = T__38;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalBlocXML.g:38:7: ( '<link CompID=' )
-            // InternalBlocXML.g:38:9: '<link CompID='
+            // InternalBlocXML.g:38:7: ( '<node Name=' )
+            // InternalBlocXML.g:38:9: '<node Name='
             {
-            match("<link CompID="); 
+            match("<node Name="); 
 
 
             }
@@ -658,10 +661,10 @@ public class InternalBlocXMLLexer extends Lexer {
         try {
             int _type = T__39;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalBlocXML.g:39:7: ( ' PortID=' )
-            // InternalBlocXML.g:39:9: ' PortID='
+            // InternalBlocXML.g:39:7: ( ' Technology=\"Bloc\">' )
+            // InternalBlocXML.g:39:9: ' Technology=\"Bloc\">'
             {
-            match(" PortID="); 
+            match(" Technology=\"Bloc\">"); 
 
 
             }
@@ -679,10 +682,10 @@ public class InternalBlocXMLLexer extends Lexer {
         try {
             int _type = T__40;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalBlocXML.g:40:7: ( ' PortName=' )
-            // InternalBlocXML.g:40:9: ' PortName='
+            // InternalBlocXML.g:40:7: ( '</node>' )
+            // InternalBlocXML.g:40:9: '</node>'
             {
-            match(" PortName="); 
+            match("</node>"); 
 
 
             }
@@ -700,10 +703,10 @@ public class InternalBlocXMLLexer extends Lexer {
         try {
             int _type = T__41;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalBlocXML.g:41:7: ( ' PortDirection=' )
-            // InternalBlocXML.g:41:9: ' PortDirection='
+            // InternalBlocXML.g:41:7: ( '<link CompID=' )
+            // InternalBlocXML.g:41:9: '<link CompID='
             {
-            match(" PortDirection="); 
+            match("<link CompID="); 
 
 
             }
@@ -721,10 +724,10 @@ public class InternalBlocXMLLexer extends Lexer {
         try {
             int _type = T__42;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalBlocXML.g:42:7: ( '/>' )
-            // InternalBlocXML.g:42:9: '/>'
+            // InternalBlocXML.g:42:7: ( ' PortID=' )
+            // InternalBlocXML.g:42:9: ' PortID='
             {
-            match("/>"); 
+            match(" PortID="); 
 
 
             }
@@ -737,15 +740,78 @@ public class InternalBlocXMLLexer extends Lexer {
     }
     // $ANTLR end "T__42"
 
+    // $ANTLR start "T__43"
+    public final void mT__43() throws RecognitionException {
+        try {
+            int _type = T__43;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // InternalBlocXML.g:43:7: ( ' PortName=' )
+            // InternalBlocXML.g:43:9: ' PortName='
+            {
+            match(" PortName="); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__43"
+
+    // $ANTLR start "T__44"
+    public final void mT__44() throws RecognitionException {
+        try {
+            int _type = T__44;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // InternalBlocXML.g:44:7: ( ' PortDirection=' )
+            // InternalBlocXML.g:44:9: ' PortDirection='
+            {
+            match(" PortDirection="); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__44"
+
+    // $ANTLR start "T__45"
+    public final void mT__45() throws RecognitionException {
+        try {
+            int _type = T__45;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // InternalBlocXML.g:45:7: ( '/>' )
+            // InternalBlocXML.g:45:9: '/>'
+            {
+            match("/>"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__45"
+
     // $ANTLR start "RULE_ID"
     public final void mRULE_ID() throws RecognitionException {
         try {
             int _type = RULE_ID;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalBlocXML.g:895:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
-            // InternalBlocXML.g:895:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // InternalBlocXML.g:913:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
+            // InternalBlocXML.g:913:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             {
-            // InternalBlocXML.g:895:11: ( '^' )?
+            // InternalBlocXML.g:913:11: ( '^' )?
             int alt1=2;
             int LA1_0 = input.LA(1);
 
@@ -754,7 +820,7 @@ public class InternalBlocXMLLexer extends Lexer {
             }
             switch (alt1) {
                 case 1 :
-                    // InternalBlocXML.g:895:11: '^'
+                    // InternalBlocXML.g:913:11: '^'
                     {
                     match('^'); 
 
@@ -772,7 +838,7 @@ public class InternalBlocXMLLexer extends Lexer {
                 recover(mse);
                 throw mse;}
 
-            // InternalBlocXML.g:895:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // InternalBlocXML.g:913:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             loop2:
             do {
                 int alt2=2;
@@ -821,10 +887,10 @@ public class InternalBlocXMLLexer extends Lexer {
         try {
             int _type = RULE_INT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalBlocXML.g:897:10: ( ( '0' .. '9' )+ )
-            // InternalBlocXML.g:897:12: ( '0' .. '9' )+
+            // InternalBlocXML.g:915:10: ( ( '0' .. '9' )+ )
+            // InternalBlocXML.g:915:12: ( '0' .. '9' )+
             {
-            // InternalBlocXML.g:897:12: ( '0' .. '9' )+
+            // InternalBlocXML.g:915:12: ( '0' .. '9' )+
             int cnt3=0;
             loop3:
             do {
@@ -838,7 +904,7 @@ public class InternalBlocXMLLexer extends Lexer {
 
                 switch (alt3) {
             	case 1 :
-            	    // InternalBlocXML.g:897:13: '0' .. '9'
+            	    // InternalBlocXML.g:915:13: '0' .. '9'
             	    {
             	    matchRange('0','9'); 
 
@@ -870,10 +936,10 @@ public class InternalBlocXMLLexer extends Lexer {
         try {
             int _type = RULE_STRING;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalBlocXML.g:899:13: ( ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
-            // InternalBlocXML.g:899:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // InternalBlocXML.g:917:13: ( ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
+            // InternalBlocXML.g:917:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             {
-            // InternalBlocXML.g:899:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // InternalBlocXML.g:917:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             int alt6=2;
             int LA6_0 = input.LA(1);
 
@@ -891,10 +957,10 @@ public class InternalBlocXMLLexer extends Lexer {
             }
             switch (alt6) {
                 case 1 :
-                    // InternalBlocXML.g:899:16: '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
+                    // InternalBlocXML.g:917:16: '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
                     {
                     match('\"'); 
-                    // InternalBlocXML.g:899:20: ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )*
+                    // InternalBlocXML.g:917:20: ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )*
                     loop4:
                     do {
                         int alt4=3;
@@ -910,7 +976,7 @@ public class InternalBlocXMLLexer extends Lexer {
 
                         switch (alt4) {
                     	case 1 :
-                    	    // InternalBlocXML.g:899:21: '\\\\' .
+                    	    // InternalBlocXML.g:917:21: '\\\\' .
                     	    {
                     	    match('\\'); 
                     	    matchAny(); 
@@ -918,7 +984,7 @@ public class InternalBlocXMLLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // InternalBlocXML.g:899:28: ~ ( ( '\\\\' | '\"' ) )
+                    	    // InternalBlocXML.g:917:28: ~ ( ( '\\\\' | '\"' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='!')||(input.LA(1)>='#' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -943,10 +1009,10 @@ public class InternalBlocXMLLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // InternalBlocXML.g:899:48: '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
+                    // InternalBlocXML.g:917:48: '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
                     {
                     match('\''); 
-                    // InternalBlocXML.g:899:53: ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )*
+                    // InternalBlocXML.g:917:53: ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )*
                     loop5:
                     do {
                         int alt5=3;
@@ -962,7 +1028,7 @@ public class InternalBlocXMLLexer extends Lexer {
 
                         switch (alt5) {
                     	case 1 :
-                    	    // InternalBlocXML.g:899:54: '\\\\' .
+                    	    // InternalBlocXML.g:917:54: '\\\\' .
                     	    {
                     	    match('\\'); 
                     	    matchAny(); 
@@ -970,7 +1036,7 @@ public class InternalBlocXMLLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // InternalBlocXML.g:899:61: ~ ( ( '\\\\' | '\\'' ) )
+                    	    // InternalBlocXML.g:917:61: ~ ( ( '\\\\' | '\\'' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='&')||(input.LA(1)>='(' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -1013,12 +1079,12 @@ public class InternalBlocXMLLexer extends Lexer {
         try {
             int _type = RULE_ML_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalBlocXML.g:901:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
-            // InternalBlocXML.g:901:19: '/*' ( options {greedy=false; } : . )* '*/'
+            // InternalBlocXML.g:919:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
+            // InternalBlocXML.g:919:19: '/*' ( options {greedy=false; } : . )* '*/'
             {
             match("/*"); 
 
-            // InternalBlocXML.g:901:24: ( options {greedy=false; } : . )*
+            // InternalBlocXML.g:919:24: ( options {greedy=false; } : . )*
             loop7:
             do {
                 int alt7=2;
@@ -1043,7 +1109,7 @@ public class InternalBlocXMLLexer extends Lexer {
 
                 switch (alt7) {
             	case 1 :
-            	    // InternalBlocXML.g:901:52: .
+            	    // InternalBlocXML.g:919:52: .
             	    {
             	    matchAny(); 
 
@@ -1073,12 +1139,12 @@ public class InternalBlocXMLLexer extends Lexer {
         try {
             int _type = RULE_SL_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalBlocXML.g:903:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
-            // InternalBlocXML.g:903:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
+            // InternalBlocXML.g:921:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
+            // InternalBlocXML.g:921:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
             {
             match("//"); 
 
-            // InternalBlocXML.g:903:24: (~ ( ( '\\n' | '\\r' ) ) )*
+            // InternalBlocXML.g:921:24: (~ ( ( '\\n' | '\\r' ) ) )*
             loop8:
             do {
                 int alt8=2;
@@ -1091,7 +1157,7 @@ public class InternalBlocXMLLexer extends Lexer {
 
                 switch (alt8) {
             	case 1 :
-            	    // InternalBlocXML.g:903:24: ~ ( ( '\\n' | '\\r' ) )
+            	    // InternalBlocXML.g:921:24: ~ ( ( '\\n' | '\\r' ) )
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='\t')||(input.LA(1)>='\u000B' && input.LA(1)<='\f')||(input.LA(1)>='\u000E' && input.LA(1)<='\uFFFF') ) {
             	        input.consume();
@@ -1111,7 +1177,7 @@ public class InternalBlocXMLLexer extends Lexer {
                 }
             } while (true);
 
-            // InternalBlocXML.g:903:40: ( ( '\\r' )? '\\n' )?
+            // InternalBlocXML.g:921:40: ( ( '\\r' )? '\\n' )?
             int alt10=2;
             int LA10_0 = input.LA(1);
 
@@ -1120,9 +1186,9 @@ public class InternalBlocXMLLexer extends Lexer {
             }
             switch (alt10) {
                 case 1 :
-                    // InternalBlocXML.g:903:41: ( '\\r' )? '\\n'
+                    // InternalBlocXML.g:921:41: ( '\\r' )? '\\n'
                     {
-                    // InternalBlocXML.g:903:41: ( '\\r' )?
+                    // InternalBlocXML.g:921:41: ( '\\r' )?
                     int alt9=2;
                     int LA9_0 = input.LA(1);
 
@@ -1131,7 +1197,7 @@ public class InternalBlocXMLLexer extends Lexer {
                     }
                     switch (alt9) {
                         case 1 :
-                            // InternalBlocXML.g:903:41: '\\r'
+                            // InternalBlocXML.g:921:41: '\\r'
                             {
                             match('\r'); 
 
@@ -1163,10 +1229,10 @@ public class InternalBlocXMLLexer extends Lexer {
         try {
             int _type = RULE_WS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalBlocXML.g:905:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
-            // InternalBlocXML.g:905:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // InternalBlocXML.g:923:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
+            // InternalBlocXML.g:923:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             {
-            // InternalBlocXML.g:905:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // InternalBlocXML.g:923:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             int cnt11=0;
             loop11:
             do {
@@ -1220,8 +1286,8 @@ public class InternalBlocXMLLexer extends Lexer {
         try {
             int _type = RULE_ANY_OTHER;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalBlocXML.g:907:16: ( . )
-            // InternalBlocXML.g:907:18: .
+            // InternalBlocXML.g:925:16: ( . )
+            // InternalBlocXML.g:925:18: .
             {
             matchAny(); 
 
@@ -1236,8 +1302,8 @@ public class InternalBlocXMLLexer extends Lexer {
     // $ANTLR end "RULE_ANY_OTHER"
 
     public void mTokens() throws RecognitionException {
-        // InternalBlocXML.g:1:8: ( T__11 | T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | T__42 | RULE_ID | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER )
-        int alt12=39;
+        // InternalBlocXML.g:1:8: ( T__11 | T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | T__42 | T__43 | T__44 | T__45 | RULE_ID | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER )
+        int alt12=42;
         alt12 = dfa12.predict(input);
         switch (alt12) {
             case 1 :
@@ -1465,49 +1531,70 @@ public class InternalBlocXMLLexer extends Lexer {
                 }
                 break;
             case 33 :
-                // InternalBlocXML.g:1:202: RULE_ID
+                // InternalBlocXML.g:1:202: T__43
+                {
+                mT__43(); 
+
+                }
+                break;
+            case 34 :
+                // InternalBlocXML.g:1:208: T__44
+                {
+                mT__44(); 
+
+                }
+                break;
+            case 35 :
+                // InternalBlocXML.g:1:214: T__45
+                {
+                mT__45(); 
+
+                }
+                break;
+            case 36 :
+                // InternalBlocXML.g:1:220: RULE_ID
                 {
                 mRULE_ID(); 
 
                 }
                 break;
-            case 34 :
-                // InternalBlocXML.g:1:210: RULE_INT
+            case 37 :
+                // InternalBlocXML.g:1:228: RULE_INT
                 {
                 mRULE_INT(); 
 
                 }
                 break;
-            case 35 :
-                // InternalBlocXML.g:1:219: RULE_STRING
+            case 38 :
+                // InternalBlocXML.g:1:237: RULE_STRING
                 {
                 mRULE_STRING(); 
 
                 }
                 break;
-            case 36 :
-                // InternalBlocXML.g:1:231: RULE_ML_COMMENT
+            case 39 :
+                // InternalBlocXML.g:1:249: RULE_ML_COMMENT
                 {
                 mRULE_ML_COMMENT(); 
 
                 }
                 break;
-            case 37 :
-                // InternalBlocXML.g:1:247: RULE_SL_COMMENT
+            case 40 :
+                // InternalBlocXML.g:1:265: RULE_SL_COMMENT
                 {
                 mRULE_SL_COMMENT(); 
 
                 }
                 break;
-            case 38 :
-                // InternalBlocXML.g:1:263: RULE_WS
+            case 41 :
+                // InternalBlocXML.g:1:281: RULE_WS
                 {
                 mRULE_WS(); 
 
                 }
                 break;
-            case 39 :
-                // InternalBlocXML.g:1:271: RULE_ANY_OTHER
+            case 42 :
+                // InternalBlocXML.g:1:289: RULE_ANY_OTHER
                 {
                 mRULE_ANY_OTHER(); 
 
@@ -1521,98 +1608,104 @@ public class InternalBlocXMLLexer extends Lexer {
 
     protected DFA12 dfa12 = new DFA12(this);
     static final String DFA12_eotS =
-        "\1\uffff\1\13\1\32\1\uffff\2\13\2\uffff\2\13\110\uffff";
+        "\1\uffff\1\13\1\33\1\uffff\2\13\2\uffff\2\13\116\uffff";
     static final String DFA12_eofS =
-        "\122\uffff";
+        "\130\uffff";
     static final String DFA12_minS =
-        "\1\0\1\57\1\104\1\uffff\1\52\1\101\2\uffff\2\0\3\uffff\1\145\1\157\1\143\1\141\5\uffff\1\104\2\uffff\1\157\11\uffff\1\144\1\143\1\157\1\145\6\uffff\1\101\1\162\1\145\1\165\1\143\1\uffff\1\144\3\uffff\1\164\1\40\1\155\1\165\1\145\1\104\2\uffff\1\145\1\155\1\76\3\uffff\1\156\1\145\2\uffff\1\164\1\156\1\40\1\164\2\uffff\1\76\2\uffff";
+        "\1\0\1\41\1\104\1\uffff\1\52\1\101\2\uffff\2\0\3\uffff\1\145\1\55\1\157\1\143\1\141\5\uffff\1\104\2\uffff\1\157\11\uffff\1\144\1\55\1\143\1\157\1\145\6\uffff\1\101\1\162\1\145\1\101\1\165\1\143\1\uffff\1\144\3\uffff\1\164\1\40\3\uffff\1\155\1\165\1\145\1\104\2\uffff\1\145\1\155\1\76\3\uffff\1\156\1\145\2\uffff\1\164\1\156\1\40\1\164\2\uffff\1\76\2\uffff";
     static final String DFA12_maxS =
-        "\1\uffff\1\166\1\126\1\uffff\1\76\1\172\2\uffff\2\uffff\3\uffff\2\157\1\166\1\151\5\uffff\1\104\2\uffff\1\157\11\uffff\1\144\1\143\2\157\6\uffff\1\124\1\162\1\145\1\165\1\143\1\uffff\1\144\3\uffff\1\164\1\163\1\155\1\165\1\145\1\116\2\uffff\1\145\1\155\1\163\3\uffff\1\156\1\145\2\uffff\1\164\1\156\1\163\1\164\2\uffff\1\163\2\uffff";
+        "\1\uffff\1\166\1\126\1\uffff\1\76\1\172\2\uffff\2\uffff\3\uffff\1\157\1\55\1\157\1\166\1\151\5\uffff\1\104\2\uffff\1\157\11\uffff\1\144\1\55\1\143\2\157\6\uffff\1\124\1\162\1\145\1\106\1\165\1\143\1\uffff\1\144\3\uffff\1\164\1\163\3\uffff\1\155\1\165\1\145\1\116\2\uffff\1\145\1\155\1\163\3\uffff\1\156\1\145\2\uffff\1\164\1\156\1\163\1\164\2\uffff\1\163\2\uffff";
     static final String DFA12_acceptS =
-        "\3\uffff\1\6\2\uffff\1\41\1\42\2\uffff\1\46\1\47\1\1\4\uffff\1\15\1\22\1\24\1\5\1\13\1\uffff\1\25\1\32\1\uffff\1\46\1\6\1\40\1\44\1\45\1\41\1\42\1\43\1\2\4\uffff\1\14\1\21\1\23\1\26\1\12\1\34\5\uffff\1\11\1\uffff\1\16\1\17\1\20\6\uffff\1\27\1\31\3\uffff\1\35\1\36\1\37\2\uffff\1\30\1\33\4\uffff\1\3\1\4\1\uffff\1\7\1\10";
+        "\3\uffff\1\11\2\uffff\1\44\1\45\2\uffff\1\51\1\52\1\1\5\uffff\1\20\1\25\1\27\1\10\1\16\1\uffff\1\30\1\35\1\uffff\1\51\1\11\1\43\1\47\1\50\1\44\1\45\1\46\1\2\5\uffff\1\17\1\24\1\26\1\31\1\15\1\37\6\uffff\1\14\1\uffff\1\21\1\22\1\23\2\uffff\1\3\1\4\1\5\4\uffff\1\32\1\34\3\uffff\1\40\1\41\1\42\2\uffff\1\33\1\36\4\uffff\1\6\1\7\1\uffff\1\12\1\13";
     static final String DFA12_specialS =
-        "\1\1\7\uffff\1\0\1\2\110\uffff}>";
+        "\1\0\7\uffff\1\1\1\2\116\uffff}>";
     static final String[] DFA12_transitionS = {
             "\11\13\2\12\2\13\1\12\22\13\1\2\1\13\1\10\4\13\1\11\7\13\1\4\12\7\2\13\1\1\1\13\1\3\2\13\32\6\3\13\1\5\1\6\1\13\32\6\uff85\13",
-            "\1\17\17\uffff\1\14\43\uffff\1\21\1\16\7\uffff\1\20\1\uffff\1\15\5\uffff\1\23\1\uffff\1\22",
-            "\1\24\4\uffff\1\26\4\uffff\1\27\1\uffff\1\31\3\uffff\1\30\1\uffff\1\25",
+            "\1\16\15\uffff\1\20\17\uffff\1\14\43\uffff\1\22\1\17\7\uffff\1\21\1\uffff\1\15\5\uffff\1\24\1\uffff\1\23",
+            "\1\25\4\uffff\1\27\4\uffff\1\30\1\uffff\1\32\3\uffff\1\31\1\uffff\1\26",
             "",
-            "\1\35\4\uffff\1\36\16\uffff\1\34",
-            "\32\37\4\uffff\1\37\1\uffff\32\37",
-            "",
-            "",
-            "\0\41",
-            "\0\41",
+            "\1\36\4\uffff\1\37\16\uffff\1\35",
+            "\32\40\4\uffff\1\40\1\uffff\32\40",
             "",
             "",
-            "",
-            "\1\42\11\uffff\1\43",
-            "\1\44",
-            "\1\50\1\45\7\uffff\1\47\1\uffff\1\46\5\uffff\1\52\1\uffff\1\51",
-            "\1\53\7\uffff\1\54",
+            "\0\42",
+            "\0\42",
             "",
             "",
             "",
-            "",
-            "",
-            "\1\55",
-            "",
-            "",
-            "\1\56",
-            "",
-            "",
-            "",
-            "",
+            "\1\43\11\uffff\1\44",
+            "\1\45",
+            "\1\46",
+            "\1\52\1\47\7\uffff\1\51\1\uffff\1\50\5\uffff\1\54\1\uffff\1\53",
+            "\1\55\7\uffff\1\56",
             "",
             "",
             "",
             "",
             "",
             "\1\57",
+            "",
+            "",
             "\1\60",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
             "\1\61",
-            "\1\62\11\uffff\1\63",
+            "\1\62",
+            "\1\63",
+            "\1\64",
+            "\1\65\11\uffff\1\66",
             "",
             "",
             "",
             "",
             "",
             "",
-            "\1\64\4\uffff\1\65\15\uffff\1\66",
-            "\1\67",
-            "\1\70",
-            "\1\71",
+            "\1\67\4\uffff\1\70\15\uffff\1\71",
             "\1\72",
-            "",
             "\1\73",
-            "",
-            "",
-            "",
-            "\1\74",
-            "\1\76\122\uffff\1\75",
+            "\1\75\3\uffff\1\76\1\74",
             "\1\77",
             "\1\100",
+            "",
             "\1\101",
-            "\1\104\4\uffff\1\102\4\uffff\1\103",
+            "",
+            "",
+            "",
+            "\1\102",
+            "\1\104\122\uffff\1\103",
+            "",
             "",
             "",
             "\1\105",
             "\1\106",
-            "\1\110\64\uffff\1\107",
-            "",
-            "",
-            "",
-            "\1\111",
-            "\1\112",
+            "\1\107",
+            "\1\112\4\uffff\1\110\4\uffff\1\111",
             "",
             "",
             "\1\113",
             "\1\114",
-            "\1\116\122\uffff\1\115",
+            "\1\116\64\uffff\1\115",
+            "",
+            "",
+            "",
             "\1\117",
+            "\1\120",
             "",
             "",
-            "\1\120\64\uffff\1\121",
+            "\1\121",
+            "\1\122",
+            "\1\124\122\uffff\1\123",
+            "\1\125",
+            "",
+            "",
+            "\1\126\64\uffff\1\127",
             "",
             ""
     };
@@ -1647,23 +1740,13 @@ public class InternalBlocXMLLexer extends Lexer {
             this.transition = DFA12_transition;
         }
         public String getDescription() {
-            return "1:1: Tokens : ( T__11 | T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | T__42 | RULE_ID | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER );";
+            return "1:1: Tokens : ( T__11 | T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | T__42 | T__43 | T__44 | T__45 | RULE_ID | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER );";
         }
         public int specialStateTransition(int s, IntStream _input) throws NoViableAltException {
             IntStream input = _input;
         	int _s = s;
             switch ( s ) {
                     case 0 : 
-                        int LA12_8 = input.LA(1);
-
-                        s = -1;
-                        if ( ((LA12_8>='\u0000' && LA12_8<='\uFFFF')) ) {s = 33;}
-
-                        else s = 11;
-
-                        if ( s>=0 ) return s;
-                        break;
-                    case 1 : 
                         int LA12_0 = input.LA(1);
 
                         s = -1;
@@ -1691,11 +1774,21 @@ public class InternalBlocXMLLexer extends Lexer {
 
                         if ( s>=0 ) return s;
                         break;
+                    case 1 : 
+                        int LA12_8 = input.LA(1);
+
+                        s = -1;
+                        if ( ((LA12_8>='\u0000' && LA12_8<='\uFFFF')) ) {s = 34;}
+
+                        else s = 11;
+
+                        if ( s>=0 ) return s;
+                        break;
                     case 2 : 
                         int LA12_9 = input.LA(1);
 
                         s = -1;
-                        if ( ((LA12_9>='\u0000' && LA12_9<='\uFFFF')) ) {s = 33;}
+                        if ( ((LA12_9>='\u0000' && LA12_9<='\uFFFF')) ) {s = 34;}
 
                         else s = 11;
 

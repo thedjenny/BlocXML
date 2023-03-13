@@ -7,10 +7,12 @@ ExportModel:
 	export = NetlistType;
 	
 NetlistType:
-	('<netlist xmlns="urn:netlist-schema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:netlist-schema ValidationRules.xsd" >
-	<!--Famic Technologies Inc.-->
-	<!--Automation Studio-->
-	<!--Export-->')?
+	('<netlist	xmlns="urn:netlist-schema"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xsi:schemaLocation="urn:netlist-schema ValidationRules.xsd" >')?
+	('<!--Famic Technologies Inc.-->')?
+	('<!--Automation Studio-->')?
+	('<!--Export-->')?
 	'<documents>'
 	'<document Name=' docname=STRING(' DiagramType='doctype=STRING)?'>'
 	layer+= Layer*

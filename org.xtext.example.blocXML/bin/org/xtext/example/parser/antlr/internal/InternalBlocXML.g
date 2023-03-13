@@ -119,24 +119,42 @@ ruleNetlistType returns [EObject current=null]
 }:
 	(
 		(
-			otherlv_0='<netlist xmlns="urn:netlist-schema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:netlist-schema ValidationRules.xsd" >\r\n\t<!--Famic Technologies Inc.-->\r\n\t<!--Automation Studio-->\r\n\t<!--Export-->'
+			otherlv_0='<netlist\txmlns="urn:netlist-schema"\r\n\t\txmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"\r\n\t\txsi:schemaLocation="urn:netlist-schema ValidationRules.xsd" >'
 			{
-				newLeafNode(otherlv_0, grammarAccess.getNetlistTypeAccess().getNetlistXmlnsUrnNetlistSchemaXmlnsXsiHttpWwwW3Org2001XMLSchemaInstanceXsiSchemaLocationUrnNetlistSchemaValidationRulesXsdFamicTechnologiesIncAutomationStudioExportKeyword_0());
+				newLeafNode(otherlv_0, grammarAccess.getNetlistTypeAccess().getNetlistXmlnsUrnNetlistSchemaXmlnsXsiHttpWwwW3Org2001XMLSchemaInstanceXsiSchemaLocationUrnNetlistSchemaValidationRulesXsdKeyword_0());
 			}
 		)?
-		otherlv_1='<documents>'
+		(
+			otherlv_1='<!--Famic Technologies Inc.-->'
+			{
+				newLeafNode(otherlv_1, grammarAccess.getNetlistTypeAccess().getFamicTechnologiesIncKeyword_1());
+			}
+		)?
+		(
+			otherlv_2='<!--Automation Studio-->'
+			{
+				newLeafNode(otherlv_2, grammarAccess.getNetlistTypeAccess().getAutomationStudioKeyword_2());
+			}
+		)?
+		(
+			otherlv_3='<!--Export-->'
+			{
+				newLeafNode(otherlv_3, grammarAccess.getNetlistTypeAccess().getExportKeyword_3());
+			}
+		)?
+		otherlv_4='<documents>'
 		{
-			newLeafNode(otherlv_1, grammarAccess.getNetlistTypeAccess().getDocumentsKeyword_1());
+			newLeafNode(otherlv_4, grammarAccess.getNetlistTypeAccess().getDocumentsKeyword_4());
 		}
-		otherlv_2='<document Name='
+		otherlv_5='<document Name='
 		{
-			newLeafNode(otherlv_2, grammarAccess.getNetlistTypeAccess().getDocumentNameKeyword_2());
+			newLeafNode(otherlv_5, grammarAccess.getNetlistTypeAccess().getDocumentNameKeyword_5());
 		}
 		(
 			(
-				lv_docname_3_0=RULE_STRING
+				lv_docname_6_0=RULE_STRING
 				{
-					newLeafNode(lv_docname_3_0, grammarAccess.getNetlistTypeAccess().getDocnameSTRINGTerminalRuleCall_3_0());
+					newLeafNode(lv_docname_6_0, grammarAccess.getNetlistTypeAccess().getDocnameSTRINGTerminalRuleCall_6_0());
 				}
 				{
 					if ($current==null) {
@@ -145,21 +163,21 @@ ruleNetlistType returns [EObject current=null]
 					setWithLastConsumed(
 						$current,
 						"docname",
-						lv_docname_3_0,
+						lv_docname_6_0,
 						"org.eclipse.xtext.common.Terminals.STRING");
 				}
 			)
 		)
 		(
-			otherlv_4=' DiagramType='
+			otherlv_7=' DiagramType='
 			{
-				newLeafNode(otherlv_4, grammarAccess.getNetlistTypeAccess().getDiagramTypeKeyword_4_0());
+				newLeafNode(otherlv_7, grammarAccess.getNetlistTypeAccess().getDiagramTypeKeyword_7_0());
 			}
 			(
 				(
-					lv_doctype_5_0=RULE_STRING
+					lv_doctype_8_0=RULE_STRING
 					{
-						newLeafNode(lv_doctype_5_0, grammarAccess.getNetlistTypeAccess().getDoctypeSTRINGTerminalRuleCall_4_1_0());
+						newLeafNode(lv_doctype_8_0, grammarAccess.getNetlistTypeAccess().getDoctypeSTRINGTerminalRuleCall_7_1_0());
 					}
 					{
 						if ($current==null) {
@@ -168,22 +186,22 @@ ruleNetlistType returns [EObject current=null]
 						setWithLastConsumed(
 							$current,
 							"doctype",
-							lv_doctype_5_0,
+							lv_doctype_8_0,
 							"org.eclipse.xtext.common.Terminals.STRING");
 					}
 				)
 			)
 		)?
-		otherlv_6='>'
+		otherlv_9='>'
 		{
-			newLeafNode(otherlv_6, grammarAccess.getNetlistTypeAccess().getGreaterThanSignKeyword_5());
+			newLeafNode(otherlv_9, grammarAccess.getNetlistTypeAccess().getGreaterThanSignKeyword_8());
 		}
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getNetlistTypeAccess().getLayerLayerParserRuleCall_6_0());
+					newCompositeNode(grammarAccess.getNetlistTypeAccess().getLayerLayerParserRuleCall_9_0());
 				}
-				lv_layer_7_0=ruleLayer
+				lv_layer_10_0=ruleLayer
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getNetlistTypeRule());
@@ -191,26 +209,26 @@ ruleNetlistType returns [EObject current=null]
 					add(
 						$current,
 						"layer",
-						lv_layer_7_0,
+						lv_layer_10_0,
 						"org.xtext.example.BlocXML.Layer");
 					afterParserOrEnumRuleCall();
 				}
 			)
 		)*
-		otherlv_8='</document>'
+		otherlv_11='</document>'
 		{
-			newLeafNode(otherlv_8, grammarAccess.getNetlistTypeAccess().getDocumentKeyword_7());
+			newLeafNode(otherlv_11, grammarAccess.getNetlistTypeAccess().getDocumentKeyword_10());
 		}
-		otherlv_9='</documents>'
+		otherlv_12='</documents>'
 		{
-			newLeafNode(otherlv_9, grammarAccess.getNetlistTypeAccess().getDocumentsKeyword_8());
+			newLeafNode(otherlv_12, grammarAccess.getNetlistTypeAccess().getDocumentsKeyword_11());
 		}
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getNetlistTypeAccess().getNodesNodesParserRuleCall_9_0());
+					newCompositeNode(grammarAccess.getNetlistTypeAccess().getNodesNodesParserRuleCall_12_0());
 				}
-				lv_nodes_10_0=ruleNodes
+				lv_nodes_13_0=ruleNodes
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getNetlistTypeRule());
@@ -218,15 +236,15 @@ ruleNetlistType returns [EObject current=null]
 					set(
 						$current,
 						"nodes",
-						lv_nodes_10_0,
+						lv_nodes_13_0,
 						"org.xtext.example.BlocXML.Nodes");
 					afterParserOrEnumRuleCall();
 				}
 			)
 		)
-		otherlv_11='</netlist>'
+		otherlv_14='</netlist>'
 		{
-			newLeafNode(otherlv_11, grammarAccess.getNetlistTypeAccess().getNetlistKeyword_10());
+			newLeafNode(otherlv_14, grammarAccess.getNetlistTypeAccess().getNetlistKeyword_13());
 		}
 	)
 ;

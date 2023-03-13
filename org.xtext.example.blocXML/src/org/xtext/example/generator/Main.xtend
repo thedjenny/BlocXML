@@ -63,6 +63,10 @@ class Main {
 		}
 
 		// Configure and start the generator
+		/*
+		 * Note importante: Pour des contraintes d'arduino le nom du sketch.ino doit IMPERATIVEMENT etre dans un dossier du meme nom
+		 * 
+		 */
 		fileAccess.outputPath = 'src-gen/code/'
 		val context = new GeneratorContext => [
 			cancelIndicator = CancelIndicator.NullImpl
